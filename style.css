@@ -1,0 +1,203 @@
+body {
+	 margin: 0;
+  max-width: 100%;
+  height: auto;
+    font-family: Arial, sans-serif;
+    background-image: url("image/bg.jpg"); 
+	background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat;
+
+}
+/* LOGIN PAGE ONLY */
+body.login-page {
+  background: #f9f9f9;   /* white/light background */
+  background-image: none;
+}
+
+/* HOME PAGE OVERLAY */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: #ff4b5c;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #e63b4b;
+}
+/* SECOND PAGE */
+.content-page {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+  background-color: #f9f9f9;
+   min-height: 100vh;
+  color: white
+  
+  .profile-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 450px;
+}
+
+
+.content-page h2 {
+  color: #ff4b5c;
+  margin-bottom: 10px;
+}
+.content-page p {
+  font-size: 16px;
+margin: 6px 0; 
+
+
+
+input {
+    padding: 220px;
+    width:  10px;
+    border-radius: 5px;
+    border: none;
+
+}
+
+
+
+.role-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.role-card {
+    width: 160px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;;
+    font-weight: bold;
+    transition: 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+.role-card span {
+    margin-top: 8px;
+}
+.role-card:hover {
+    background: #1e90ff;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+}
+.overlay {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+    font-weight: 700;
+}
+h3 {
+    margin-top: 30px;
+    text-align: center;
+    color: #1e3c72;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e3c72;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+input:focus, select:focus {
+    border-color: #1e3c72;
+}
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+button:hover {
+    background: #2a5298;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+table th {
+    background-color: #1e3c72;
+    color: white;
+}
+

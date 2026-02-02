@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+<h2>Your Results</h2>
+<div id="list"></div>
+<script>
+let student = "Fatou";
+let data = JSON.parse(localStorage.getItem("results")) || [];
+let html = "";
+data.forEach(r=>{
+  if(r.student === student){
+    html += `<p>${r.subject} : ${r.score}/${r.total}</p>`;
+  }
+});
+document.getElementById("list").innerHTML = html;
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Science Exam</title>
+   <link rel="stylesheet" href="exam.css">
+  <style>
+  
+/* Hide the normal radio */
+.question input[type="radio"] {
+  display: none;
+}
+/* Container for each option */
+.question label {
+  position: relative;
+  display: block;
+  padding: 14px 16px 14px 52px;
+  margin: 10px 0;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+/* Hover effect */
+.question label:hover {
+  border-color: #0b6fa4;
+  background: #f7fbfe;
+}
+/* Outer circle */
+.question label::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0b6fa4;
+  border-radius: 50%;
+  background: #fff;
+}
+/* When checked */
+.question input[type="radio"]:checked + label {
+  background: #eaf6fd;
+  border-color: #0b6fa4;
+  box-shadow: 0 0 0 2px rgba(11,111,164,0.1);
+}
+/* Inner dot when checked */
+.question input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: #0b6fa4;
+  border-radius: 50%;
+}
+
+/* Writing answer box */
+.question textarea {
+  width: 100%;
+  min-height: 140px;   /* make it tall */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #dcdcdc;
+  resize: vertical;   /* allow student to expand it */
+  box-sizing: border-box;
+}
+/* When student clicks inside */
+.question textarea:focus {
+  outline: none;
+  border-color: #0b6fa4;
+  box-shadow: 0 0 0 2px rgba(11,111,164,0.1);
+}
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.logout-btn {
+  background: #d9534f;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.logout-btn:hover {
+  background: #c9302c;
+}
+  </style>
+</head>
+<body>
+<div class="exam-box">
+  <h1>Primary 5 Science Examination</h1>
+  <form>
+    <h2>1. Pollution (Land, Water, Air, Noise)</h2>
+    <div class="question">
+      <p>1. Which of the following is a cause of air pollution?</p>
+	  <input type="radio" name="q1" id="q1a">
+      <label for="q1"> Planting trees</label>
+	  <input type="radio" name="q1" id="q1b">
+      <label for="q1"> Burning rubbish</label>
+	  <input type="radio" name="q1" id="q1c">
+      <label for="q1"> Sweeping the floor</label>
+	  <input type="radio" name="q1" id="q1d">
+      <label for="q1"> Drinking water</label>
+    </div>
+    <div class="question">
+      <p>2. Which pollution affects rivers, lakes, and oceans?</p>
+	  <input type="radio" name="q2" id="q2a">
+      <label for="q2"> Land pollution</label>
+	  <input type="radio" name="q2" id="q2b">
+      <label for="q2"> Water pollution</label>
+	  <input type="radio" name="q2" id="q2c">
+      <label for="q2"> Air pollution</label>
+	  <input type="radio" name="q2" id="q2d">
+      <label for="q2"> Noise pollution</label>
+    </div>
+    <div class="question">
+      <p>3. List two causes of land pollution.</p>
+      <textarea></textarea>
+    </div>
+    <h2>2. Simple Machines</h2>
+    <div class="question">
+      <p>4. A wheelbarrow is an example of a:</p>
+	  <input type="radio" name="q4" id="q4a">
+      <label for="q4"> Pulley</label>
+	   <input type="radio" name="q4" id="q4b">
+      <label for="q4"> Lever</label>
+	   <input type="radio" name="q4" id="q4c">
+      <label for="q4"> Wedge</label>
+	   <input type="radio" name="q4" id="q4d">
+      <label for="q4"> Screw</label>
+    </div>
+    <div class="question">
+      <p>5. Name any three simple machines.</p>
+      <textarea></textarea>
+    </div>
+    <h2>3. Common Substances</h2>
+    <div class="question">
+      <p>6. Which of the following is a liquid substance?</p>
+	   <input type="radio" name="q6" id="q6a">
+      <label for="q6"> Air</label>
+	    <input type="radio" name="q6" id="q6b">
+      <label for="q6"> Stone</label>
+	    <input type="radio" name="q6" id="q6c">
+      <label for="q6"> Water</label>
+	   <input type="radio" name="q6" id="q6d">
+      <label for="q6"> Salt</label>
+    </div>
+    <div class="question">
+      <p>7. Give two examples each of solid, liquid, and gas.</p>
+      <textarea></textarea>
+    </div>
+    <h2>4. Excretory System</h2>
+    <div class="question">
+      <p>8. The organ that removes urine from the body is the:</p>
+	   <input type="radio" name="q8" id="q8a">
+      <label for="q8"> Lungs</label>
+	   <input type="radio" name="q8" id="q8b">
+      <label for="q8"> Heart</label>
+	   <input type="radio" name="q8" id="q8c">
+      <label for="q8"> Kidneys</label>
+	   <input type="radio" name="q8" id="q8d">
+      <label for="q8"> Stomach</label>
+    </div>
+    <div class="question">
+      <p>9. What is excretion?</p>
+      <textarea></textarea>
+    </div>
+    <h2>5. Respiratory System</h2>
+    <div class="question">
+      <p>10. We breathe in air through the:</p>
+	   <input type="radio" name="q10" id="q10a">
+      <label for="q10"> Ears</label>
+	  <input type="radio" name="q10" id="q10b">
+      <label for="q10"> Nose</label>
+	  <input type="radio" name="q10" id="q10c">
+      <label for="q10"> Hands</label>
+	  <input type="radio" name="q10" id="q10d">
+      <label for="q10"> Skin</label>
+    </div>
+    <div class="question">
+      <p>11. Describe the process of breathing in and out.</p>
+      <textarea></textarea>
+    </div>
+   <div class="action-buttons">
+  <button class="submit-btn" type="submit">Submit Exam</button>
+  <button class="logout-btn" type="button" onclick="logout()">Logout</button>
+</div>
+  </form>
+</div>
+</body>
+</html>

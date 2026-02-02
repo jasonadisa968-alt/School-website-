@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English Test</title>
+   <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+<h3>English Language</h3>
+<form onsubmit="submitEnglish(); return false;">
+  <p>1. A dog is an ___?</p>
+  <input type="radio" name="q1" value="A"> Animal<br>
+  <input type="radio" name="q1" value="B"> Fruit<br>
+  <p>2. Opposite of big?</p>
+  <input type="radio" name="q2" value="A"> Tall<br>
+  <input type="radio" name="q2" value="B"> Small<br><br>
+  <button type="submit">Submit English</button>
+</form>
+<script>
+function submitEnglish(){
+  let score = 0;
+  if(document.querySelector('input[name="q1"]:checked')?.value === "A") score++;
+  if(document.querySelector('input[name="q2"]:checked')?.value === "B") score++;
+  let student = "Fatou";
+  let data = JSON.parse(localStorage.getItem("results")) || [];
+  data.push({
+    student: student,
+    subject: "English",
+    score: score,
+    total: 2
+  });
+  localStorage.setItem("results", JSON.stringify(data));
+  alert("English submitted!");
+  location.href = "student.html";
+}
+</script>
+</body>
+</html>

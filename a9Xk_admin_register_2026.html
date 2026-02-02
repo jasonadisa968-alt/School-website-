@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Registration</title>
+</head>
+<body>
+<div class="overlay">
+    <h2>Admin – Create Account</h2>
+    <form id="registerForm">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter full name" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <div class="form-group">
+            <label>Select Role</label>
+            <select id="role" required>
+                <option value="">Choose role</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+            </select>
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
+    <h3>Created Accounts</h3>
+    <table id="accountsTable">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Accounts will appear here -->
+        </tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

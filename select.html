@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <link rel="stylesheet" href="Style.css">
+     <title>Select Role</title>
+</head>
+<body>
+ <div class="overlay">
+        <h1>Select Role</h1>
+        <p>Choose how you want to continue</p>
+        <div class="role-box">
+            <a href="teacher-login.html" class="btn">Teacher</a>
+            <a href="student-login.html" class="btn">Student</a>
+        </div>
+    </div>
+</div>
+<script>
+  const buttons = document.querySelectorAll(".role-box a");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault(); // stop the normal link
+      window.location.href = "login.html"; // one login page for all
+    });
+  });
+</script>
+</body>
+</html>

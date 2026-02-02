@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h2 id="welcome"></h2>
+<script>
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    document.getElementById("welcome").innerText =
+        "Welcome " + user.name + " (" + user.role + ")";
+</script>
+</body>
+</html>

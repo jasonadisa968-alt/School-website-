@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Dashboard</title>
+</head>
+<body>
+<h2>Teacher Dashboard</h2>
+<div id="all"></div>
+<script>
+let data = JSON.parse(localStorage.getItem("results")) || [];
+let html = "";
+data.forEach(r=>{
+  html += `<p>${r.student} - ${r.subject} : ${r.score}/${r.total}</p>`;
+});
+document.getElementById("all").innerHTML = html;
+</script>
+</body>
+</html>
